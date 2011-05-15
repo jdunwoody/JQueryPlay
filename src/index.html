@@ -1,0 +1,41 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+</head>
+<body>
+	<div id="accordion">
+		<h3>
+			<a href="#">First header</a>
+		</h3>
+		<div>First content</div>
+		<h3>
+			<a href="#">Second header</a>
+		</h3>
+		<div>Second content</div>
+	</div>
+
+
+	<a id="thanksLink" href="http://jquery.com/">jQuery</a>
+	<script src="../lib/jquery-1.5.1.js"></script>
+	<script src="../lib/jquery.ui.accordion.js"></script>
+	<script src="../lib/jquery.ui.core.js"></script>
+	<script src="../lib/jquery.ui.widget.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(function() {
+				$("#accordion").accordion();
+			});
+
+			$("#thanksLink").click(function(event) {
+				//alert("Thanks for visiting!");
+				event.preventDefault();
+				$(this).hide("slow");
+			});
+		});
+	</script>
+</body>
+</html>
